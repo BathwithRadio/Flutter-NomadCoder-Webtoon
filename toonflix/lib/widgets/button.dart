@@ -23,14 +23,19 @@ class Button extends StatelessWidget {
         borderRadius: BorderRadius.circular(45),
         color: bgColor,
       ),
-      child: const Padding(
-        padding: EdgeInsets.symmetric(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
           vertical: 20,
           horizontal: 50,
         ),
-        child: text,
+        child: Text(
+          text,
+          style: TextStyle(
+            color: textColor,
+            fontSize: 20,
+          ),
         ),
       ),
-    )
+    );
   }
 }
