@@ -138,6 +138,7 @@ class App extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          // const는 사용하는 widget에 따라 위치가 변경될 필요가 있다.
                           const Text(
                             'Euro',
                             style: TextStyle(
