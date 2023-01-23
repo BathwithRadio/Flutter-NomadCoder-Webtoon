@@ -11,16 +11,17 @@ class App extends StatefulWidget {
 
 class _AppState extends State<App> {
   //
-  int counter = 0;
+  List<int> numbers = [];
 
   void onClicked() {
     // setState - notify to State Class that data has changed
     // counter = counter + 1;
     setState(() {
-      // no need to put changes into setState
+      // no need to put mutation in setState
       // put setState on bottom, put changes outside of setState - this will work too
-      counter = counter + 1;
+      numbers.add(numbers.length);
     });
+    print(numbers);
   }
 
   @override
@@ -37,10 +38,7 @@ class _AppState extends State<App> {
                 'Click Count',
                 style: TextStyle(fontSize: 30),
               ),
-              Text(
-                '$counter',
-                style: const TextStyle(fontSize: 30),
-              ),
+              for (var n in numbers) Text('$n'),
               IconButton(
                 iconSize: 40,
                 onPressed: onClicked,
