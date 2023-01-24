@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:toonflix/home_screen.dart';
+import 'package:toonflix/screens/home_screem.dart';
+import 'package:toonflix/services/api_service.dart';
+
+//https://webtoon-crawler.nomadcoders.workers.dev/
 
 void main(List<String> args) {
-  runApp(App());
+  ApiService().getTodaysToons();
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  //
+  // widget has key, and key used like identifier
+  // so with this, flutter can find widget quickly
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     //
-    return MaterialApp(
-      theme: ThemeData(
-        backgroundColor: const Color(0xFFE7626C),
-        textTheme: const TextTheme(
-          headline1: TextStyle(
-            color: Color(0xFF232B55),
-          ),
-        ),
-        cardColor: const Color(0xFFF4EDDB),
-      ),
-      home: const HomeScreen(),
+    return const MaterialApp(
+      home: HomeScreen(),
     );
   }
 }
