@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/screens/home_screem.dart';
-import 'package:toonflix/services/api_service.dart';
 
 //https://webtoon-crawler.nomadcoders.workers.dev/
 
 void main(List<String> args) {
-  ApiService().getTodaysToons();
   runApp(const App());
 }
 
