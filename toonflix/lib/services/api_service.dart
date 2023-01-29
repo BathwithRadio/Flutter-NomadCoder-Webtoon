@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:toonflix/models/webtoon.dart';
 
+// You don't need to create this Service
+// but for oraganize and separate code - keep UI and API access separate
 class ApiService {
   //
   // 이 클래스에는 state가 없기 때문에 static으로 지정한다.
