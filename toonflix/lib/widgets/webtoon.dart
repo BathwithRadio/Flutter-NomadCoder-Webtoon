@@ -30,19 +30,22 @@ class Webtoon extends StatelessWidget {
       },
       child: Column(
         children: [
-          Container(
-            width: 250,
-            clipBehavior: Clip.hardEdge, // 자식의 부모 침범을 제어하는 방법
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              boxShadow: [
-                BoxShadow(
-                    blurRadius: 15,
-                    offset: const Offset(10, 10),
-                    color: Colors.black.withOpacity(0.5))
-              ],
+          Hero(
+            tag: id,
+            child: Container(
+              width: 250,
+              clipBehavior: Clip.hardEdge, // 자식의 부모 침범을 제어하는 방법
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 15,
+                      offset: const Offset(10, 10),
+                      color: Colors.black.withOpacity(0.5))
+                ],
+              ),
+              child: Image.network(thumb),
             ),
-            child: Image.network(thumb),
           ),
           const SizedBox(
             height: 10,
