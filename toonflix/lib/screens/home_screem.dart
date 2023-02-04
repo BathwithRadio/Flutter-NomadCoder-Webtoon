@@ -4,7 +4,8 @@ import 'package:toonflix/services/api_service.dart';
 import 'package:toonflix/widgets/webtoon.dart';
 
 class HomeScreen extends StatelessWidget {
-  //
+  // 반면 getTodaysToons은 받을 데이터가 없기 때문에
+  // StatelessWidget을 extend 한다
   HomeScreen({super.key});
   final Future<List<WebtoonModel>> webtoons = ApiService.getTodaysToons();
 
